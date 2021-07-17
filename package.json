@@ -1,0 +1,56 @@
+{
+  "name": "nekomata_app",
+  "version": "0.0.0-bleeding-edge",
+  "description": "VTuber Scheduled Live Quick Notification Service.",
+  "main": "main.js",
+  "repository": "https://github.com/ReiRokusanami0010/nekomata-app.git",
+  "author": "ReiRokusanami",
+  "license": "LGPL-3.0-or-later",
+  "homepage": ".",
+  "build": {
+    "extends": null,
+    "files": ["dist/**/*"]
+  },
+  "scripts": {
+    "start": "electron ./dist/main.js",
+    "build:main": "tsc",
+    "build:render": "webpack",
+    "dev:electron": "concurrently \"yarn start\" \"tsc -w\" \"tsc\" \"webpack --watch\" \"webpack\""
+  },
+  "dependencies": {
+    "@doyensec/electronegativity": "^1.9.1",
+    "@types/http-cache-semantics": "^4.0.0",
+    "css-loader": "^5.2.7",
+    "deox": "^3.3.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-reload": "^1.5.0",
+    "moment": "^2.29.1",
+    "react": "16.8",
+    "react-dom": "16.8",
+    "react-is": "16.8",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "reset-css": "^5.0.1",
+    "rxjs": "6.0.0-beta.0",
+    "style-loader": "^3.1.0",
+    "styled-components": "5.0.0",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/moment": "^2.13.0",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "@types/react-redux": "^7.1.16",
+    "@types/redux": "^3.6.0",
+    "@types/styled-components": "^5.1.10",
+    "concurrently": "^6.2.0",
+    "electron": "^13.1.4",
+    "electron-builder": "^22.11.7",
+    "html-webpack-plugin": "^5.3.2",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.4",
+    "wait-on": "^6.0.0",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
