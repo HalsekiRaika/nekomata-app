@@ -1,4 +1,4 @@
-import { styled } from "./DefaultStyle"
+import { styled } from "./ThemeStyle"
 
 export const TileContainer = styled.div`
   background-color: #2F3136;

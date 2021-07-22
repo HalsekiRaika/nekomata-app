@@ -25,7 +25,7 @@ const HomeTile: React.FC<{dataEntity: IUpcomingEntity}> = props => {
     return (
       <TileMain onClick={onTileClick}>
         <TileThumbnail>
-          <img src={dataEntity.thumbnail} alt={dataEntity._uuid} width="360px" height="202px" />
+          <img src={dataEntity.thumbnail} alt={dataEntity._uuid + "_thumbnail_image"} width="360px" height="202px" />
         </TileThumbnail>
         <TileBody>
           <TileBaseInfo>

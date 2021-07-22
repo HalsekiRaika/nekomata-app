@@ -4,7 +4,8 @@ import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import store from "./actions/store/Store";
 import HomeTileContainer from "./components/containers/HomeTileContainer";
-import { DefaultStyle, theme } from "./components/styles/DefaultStyle";
+import { DefaultStyle } from "./components/styles/DefaultStyle";
+import { theme } from "./components/styles/ThemeStyle";
 
 const container = document.getElementById("contents");
 

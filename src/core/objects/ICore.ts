@@ -8,7 +8,7 @@ export default interface ICore {
 }
 
 declare global {
-    interface Window {
+    interface window {
         core: ICore;
     }
 }
