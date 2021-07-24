@@ -16,7 +16,7 @@
   "scripts": {
     "start": "electron ./dist/main.js",
     "build:main": "tsc",
-    "build:render": "webpack",
+    "build:render": "webpack --env developement",
     "dev:electron": "concurrently \"yarn start\" \"tsc -w\" \"tsc\" \"webpack --watch\" \"webpack\""
   },
   "dependencies": {
