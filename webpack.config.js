@@ -14,7 +14,7 @@ module.exports = (env) => {
         output:  { path: path.join(__dirname, "dist"), filename: "bundle.js" },
         plugins: [
             new miniCssExtPlugin(),
-            new htmlPlugin({filename: "index.html", template: "./index.html"}),
+            new htmlPlugin({filename: "index.html", template: "./src/index.html"}),
             function () {
                 if (!env.development) {
                     // Todo: Allow the use of styled-components without using unsafe-inline in environments locked down by CSP.
