@@ -2,21 +2,32 @@
   "name": "nekomata_app",
   "version": "0.0.0-bleeding-edge",
   "description": "VTuber Scheduled Live Quick Notification Service.",
-  "main": "main.js",
+  "main": "./dist/main.js",
   "repository": "https://github.com/ReiRokusanami0010/nekomata-app.git",
   "author": "ReiRokusanami",
   "license": "LGPL-3.0-or-later",
   "homepage": ".",
   "build": {
-    "extends": null,
+    "productName": "Nekomata",
     "files": [
-      "dist/**/*"
-    ]
+      "./dist/**/*",
+      "./dist/**/*.js",
+      "./dist/**/*.css",
+      "./dist/**/*.html",
+      "./dist/main.js",
+      "./dist/bundle.js",
+      "./dist/index.html"
+    ],
+    "appId": "dev.nekomata.reiva",
+    "directories": {
+      "output": "./prod"
+    }
   },
   "scripts": {
     "start": "electron ./dist/main.js",
     "build:main": "tsc",
-    "build:render": "webpack --env developement",
+    "build:render": "webpack --mode development",
+    "publish:windows": "tsc && webpack --mode production && electron-builder --win --x64",
     "dev:electron": "concurrently \"yarn start\" \"tsc -w\" \"tsc\" \"webpack --watch\" \"webpack\""
   },
   "dependencies": {

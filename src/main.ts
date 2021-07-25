@@ -20,7 +20,7 @@ const createWindow = (): void => {
         }
     });
 
-    windowProp.loadFile("./index.html").then(_ => {
+    windowProp.loadFile(path.join(__dirname, "./index.html")).then(_ => {
         logger.pInfo("Html file loaded.")
     });
 
