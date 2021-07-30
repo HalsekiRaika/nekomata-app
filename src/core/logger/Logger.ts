@@ -5,7 +5,7 @@ class Logger {
     constructor(threadName: string) { this.threadName = threadName; }
 
     private print(escapeSq: string, level: string, msg: string): void {
-        console.log(`[${moment().format("HH:mm:ss")}] [ ${escapeSq}${level}\u001b[0m ] [ ${this.threadName.padEnd(16)} ] ${msg}`);
+        console.log(`[${moment().format("HH:mm:ss")}] [ ${escapeSq}${level} \u001b[0m] [ ${this.threadName.padEnd(16)} ] ${msg}`);
     }
 
     pInfo(msg: string): void {

@@ -30,14 +30,19 @@
     "publish:windows": "tsc && webpack --config webpack.prod.js && electron-builder --win --x64",
     "dev:electron": "concurrently \"yarn start\" \"tsc -w\" \"tsc\" \"webpack --watch\" \"webpack\""
   },
+  "resolutions": {
+    "styled-components": "5.0.0"
+  },
   "dependencies": {
     "@doyensec/electronegativity": "^1.9.1",
     "@types/http-cache-semantics": "^4.0.0",
+    "@types/webpack-env": "^1.16.2",
     "csp-html-webpack-plugin": "^5.1.0",
     "css-loader": "^5.2.7",
     "deox": "^3.3.1",
     "electron-is-dev": "^2.0.0",
     "electron-reload": "^1.5.0",
+    "get-nonce": "^1.0.1",
     "mini-css-extract-plugin": "^2.1.0",
     "moment": "^2.29.1",
     "react": "16.8",
@@ -50,6 +55,7 @@
     "style-loader": "^3.1.0",
     "styled-components": "5.0.0",
     "tslib": "^1.9.0",
+    "webpack-env": "^0.8.0",
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {

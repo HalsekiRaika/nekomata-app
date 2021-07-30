@@ -16,7 +16,7 @@ const createWindow = (): void => {
             nodeIntegrationInWorker: false,
 
             // Disallow integration with Node.js in the render process.
-            preload: path.join(__dirname, "./core/preload.js")
+            preload: path.join(__dirname, "./core/Preload.js")
         }
     });
 
