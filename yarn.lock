@@ -363,6 +363,11 @@
     "@types/node" "*"
     "@types/responselike" "*"
 
+"@types/crypto-js@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@types/crypto-js/-/crypto-js-4.0.2.tgz#4524325a175bf819fec6e42560c389ce1fb92c97"
+  integrity sha512-sCVniU+h3GcGqxOmng11BRvf9TfN9yIs8KKjB8C8d75W69cpTfZG80gau9yTx5SxF3gvHGbJhdESzzvnjtf3Og==
+
 "@types/debug@^4.1.5":
   version "4.1.6"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.6.tgz#0b7018723084918a865eff99249c490505df2163"
@@ -6092,6 +6097,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript-plugin-styled-components@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/typescript-plugin-styled-components/-/typescript-plugin-styled-components-2.0.0.tgz#97e94187cca0f3058c6ad8fefffbca6766c56123"
+  integrity sha512-Wu7F96dwuphgiACHfu63vTbRRg6tkPwLnpFJwdxM70Y0PLfeKLRnvs2Yo5MAySMwE120ODMKk9W4TtJgY1ZumA==
 
 typescript@^4.3.4:
   version "4.3.4"

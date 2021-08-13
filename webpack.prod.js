@@ -5,7 +5,8 @@ const cspPlugin = require('csp-html-webpack-plugin');
 module.exports = merge(baseCfg, {
     mode: "production",
     plugins: [
-        new cspPlugin({"base-uri": ["'self'"], "object-src": ["'none'"], "script-src": ["'self'"],
-            "style-src": ["'self'"], "frame-src": ["'none'"], "worker-src": ["'none'"]}),
+        new cspPlugin({"base-uri": ["'self'"], "object-src": ["'none'"],
+            "script-src": ["'strict-dynamic'", "'self'", "'nonce-zxNLsxLiu9XeW8fgHl3PtQ=='"],
+            "style-src": ["'self'", "'nonce-zxNLsxLiu9XeW8fgHl3PtQ=='"], "frame-src": ["'none'"], "worker-src": ["'none'"]}, ),
     ]
 })
