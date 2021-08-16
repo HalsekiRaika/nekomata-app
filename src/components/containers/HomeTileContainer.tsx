@@ -19,12 +19,9 @@ export const HomeTileContainer: React.FC = () => {
     const upcomingEntitiesElem = useMemo(() => { return createTileList(upcomingEntities.list) }, [upcomingEntities.list]);
 
     return (
-        <div>
-            <Header>Nekomata</Header>
-            <TileContainer>
-                <TileGridList>{upcomingEntitiesElem}</TileGridList>
-            </TileContainer>
-        </div>
+        <TileContainer>
+            <TileGridList>{upcomingEntitiesElem}</TileGridList>
+        </TileContainer>
     );
 }
 

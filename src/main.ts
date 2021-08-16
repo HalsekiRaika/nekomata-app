@@ -1,15 +1,18 @@
 import path from "path";
-import { app, BrowserWindow } from "electron";
+import {app, BrowserWindow, ipcMain} from "electron";
 import Logger from "./core/logger/Logger";
 import * as IsDev from "electron-is-dev";
+import {TitleBarChannel} from "./core/channels/TitleBarChannel";
 
 const logger = new Logger("Electron");
 
+let windowProp: BrowserWindow;
+
 const createWindow = (): void => {
-    const windowProp = new BrowserWindow({
+    windowProp = new BrowserWindow({
         height: 720,
         width: 1280,
-        //frame: false,
+        frame: false,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: true,
@@ -36,3 +39,23 @@ const createWindow = (): void => {
 app.whenReady().then(createWindow).then(_ => {
     logger.pInfo("Window was created!")
 });
+
+// #region ipc
+
+ipcMain.on(TitleBarChannel.MINIMIZE, () =>
+    windowProp.minimize()
+);
+
+ipcMain.on(TitleBarChannel.MAXIMIZE, () =>
+    windowProp.maximize()
+);
+
+ipcMain.on(TitleBarChannel.UN_MAXIMIZE, () =>
+    windowProp.unmaximize()
+);
+
+ipcMain.on(TitleBarChannel.EXIT, () =>
+    windowProp.close()
+);
+
+// #endregion

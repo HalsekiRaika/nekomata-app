@@ -1,14 +1,14 @@
-import {IUpcomingEntity} from "../../states/IUpcomingEntity";
+import { IUpcomingEntity } from "../../states/IUpcomingEntity";
 
-export default interface ICore {
+export default interface ICacheProvider {
     loadCache: () => Promise<IUpcomingEntity[]>,
     saveCache: (entity: IUpcomingEntity) => Promise<IUpcomingEntity[]>,
     deleteCache: (entityId: string) => Promise<IUpcomingEntity[]>,
-    clearCache: () => Promise<IUpcomingEntity[]>,
+    clearCache: () => Promise<boolean>,
 }
 
 declare global {
-    interface window {
-        core: ICore;
+    interface Window {
+        core: ICacheProvider;
     }
 }

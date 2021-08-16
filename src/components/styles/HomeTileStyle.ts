@@ -6,6 +6,42 @@ export const TileContainer = styled.div`
   width: 100%;
   height: calc(100vh - 12px);
   align-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+    width: 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-button {
+
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(84, 87, 92, 0.7);
+  }
+
+  &::-webkit-scrollbar-track:start {
+    background: rgba(84, 87, 92, 0.7);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    overflow:hidden;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    background:#333;
+  }
+
+  &::-webkit-scrollbar-corner {
+    overflow:hidden;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    background:#333;
+  }
 `;
 
 export const TileGridList = styled.div`

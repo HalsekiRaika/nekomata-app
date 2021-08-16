@@ -18,6 +18,7 @@ import store from "./actions/store/Store";
 import HomeTileContainer from "./components/containers/HomeTileContainer";
 import { DefaultStyle } from "./components/styles/DefaultStyle";
 import { theme } from "./components/styles/ThemeStyle";
+import { NekomataTitleBar } from "./components/containers/TitleBarContainer";
 
 const container = document.getElementById("contents");
 
@@ -26,6 +27,7 @@ ReactDom.render(
         {}
         <ThemeProvider theme={theme}>
             {}
+            <NekomataTitleBar/>
             <DefaultStyle />
             <HomeTileContainer />
         </ThemeProvider>

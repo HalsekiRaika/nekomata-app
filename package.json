@@ -1,6 +1,6 @@
 {
   "name": "nekomata_app",
-  "version": "0.0.0-bleeding-edge",
+  "version": "0.0.1-bleeding-edge",
   "description": "VTuber Scheduled Live Quick Notification Service.",
   "main": "./dist/main.js",
   "repository": "https://github.com/ReiRokusanami0010/nekomata-app.git",
