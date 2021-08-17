@@ -2,7 +2,6 @@ import {styled} from "./ThemeStyle";
 
 export const TitleBarStyle = styled.div`
   top: 0;
-  width: 100%;
   height: 20px;
   background-color: #2F3136;
   display: flex;
@@ -27,12 +26,14 @@ export const TitleBarButton = styled.div`
 `;
 
 export const TitleBarExitButton = styled.div`
-  top: 0;
+  top: -4px;
   width: 30px;
   height: 20px;
   background-color: #2F3136;
   cursor: pointer;
+  display: flex;
   align-items: center;
+  justify-content: center;
   -webkit-app-region: no-drag;
 
   &:hover {

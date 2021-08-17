@@ -11,7 +11,7 @@ export const TileContainer = styled.div`
 
   &::-webkit-scrollbar {
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(84, 87, 92, 0.7);
     width: 10px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -22,11 +22,11 @@ export const TileContainer = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    background: rgba(84, 87, 92, 0.7);
+    background: rgba(89, 92, 97, 0.8);
   }
 
   &::-webkit-scrollbar-track:start {
-    background: rgba(84, 87, 92, 0.7);
+    background: rgba(255, 255, 255, 0.7);
   }
 
   &::-webkit-scrollbar-thumb {
