@@ -11,14 +11,15 @@ export const TitleBarStyle = styled.div`
 `;
 
 export const TitleBarButton = styled.div`
-  top: 0;
+  top: -4px;
   width: 30px;
   height: 20px;
   float: right;
   background-color: #2F3136;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
   -webkit-app-region: no-drag;
-  
   
   &:hover {
     background-color: rgba(255, 255, 255, 0.5);
