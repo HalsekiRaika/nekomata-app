@@ -31,7 +31,7 @@ ReactDom.render(
             <DefaultStyle />
             <HomeTileGridList />
         </ThemeProvider>
-    </Provider>,
-
+    </Provider>
+    ,
     container
 );

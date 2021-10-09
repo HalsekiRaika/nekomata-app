@@ -1,5 +1,5 @@
 import path from "path";
-import {app, BrowserWindow, ipcMain} from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import Logger from "./core/logger/Logger";
 import * as IsDev from "electron-is-dev";
 import { Signals } from "./core/Signals";
