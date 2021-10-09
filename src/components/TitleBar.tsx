@@ -42,6 +42,10 @@ export const NekomataTitleBar = () => {
                     <rect fill="none" stroke="white" width="12" height="0.5" fillRule="evenodd" />
                 </svg>
             </Button>
+            <Spacer />
+            <Button aria-label={"リロード"}>
+                <Temp>R</Temp>
+            </Button>
         </TitleBar>
     )
 }
@@ -87,4 +91,14 @@ const ExitButton = styled.div`
   &:hover {
     background-color: rgba(244, 67, 54, 0.5);
   }
+`;
+
+const Spacer = styled.div`
+  width: 45px;
+  height: 20px;
+  background-color: ${(props): string => props.theme.FOREGROUND};
+`;
+
+const Temp = styled.div`
+  color: white;
 `;
