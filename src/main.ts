@@ -2,7 +2,7 @@ import path from "path";
 import {app, BrowserWindow, ipcMain} from "electron";
 import Logger from "./core/logger/Logger";
 import * as IsDev from "electron-is-dev";
-import {TitleBarChannel} from "./core/channels/TitleBarChannel";
+import { Signals } from "./core/Signals";
 
 const logger = new Logger("Electron");
 
@@ -42,19 +42,19 @@ app.whenReady().then(createWindow).then(_ => {
 
 // #region ipc
 
-ipcMain.on(TitleBarChannel.MINIMIZE, () =>
+ipcMain.on(Signals.MINIMIZE, () =>
     windowProp.minimize()
 );
 
-ipcMain.on(TitleBarChannel.MAXIMIZE, () =>
+ipcMain.on(Signals.MAXIMIZE, () =>
     windowProp.maximize()
 );
 
-ipcMain.on(TitleBarChannel.UN_MAXIMIZE, () =>
+ipcMain.on(Signals.UN_MAXIMIZE, () =>
     windowProp.unmaximize()
 );
 
-ipcMain.on(TitleBarChannel.EXIT, () =>
+ipcMain.on(Signals.EXIT, () =>
     windowProp.close()
 );
 

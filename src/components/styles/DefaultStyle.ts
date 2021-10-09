@@ -7,7 +7,7 @@ export const DefaultStyle = createGlobalStyle`
     font-size: 12pt;
     height: 100vh;
     width: 100vw;
-    background-color: #36393F;
+    background-color: #18191A; /* DEEP-BLACK ;) */
     overflow: hidden;
   }
 `;

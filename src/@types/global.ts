@@ -1,6 +1,6 @@
 declare global {
     export interface Window {
-        titleBarProvider: ITitleBarProvider
+        titlebar: ITitleBarProvider
     }
 }
 
@@ -11,6 +11,6 @@ export type ITitleBarProvider = {
     onExit: () => void
 }
 
-window.titleBarProvider = window.titleBarProvider || {}
+window.titlebar = window.titlebar || {}
 
 export declare const __title_bar_provider__: ITitleBarProvider;

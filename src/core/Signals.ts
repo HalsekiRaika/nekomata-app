@@ -1,4 +1,4 @@
-export enum TitleBarChannel {
+export enum Signals {
     MAXIMIZE = "maximize",
     UN_MAXIMIZE = "un_maximize",
     MINIMIZE = "minimize",

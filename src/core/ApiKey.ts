@@ -1,3 +1,3 @@
 export enum ApiKey {
-    TITLE_BAR = "titleBarProvider",
+    TITLE_BAR = "titlebar",
 }

@@ -16,8 +16,10 @@ export const theme = {
     SECONDARY_2_2: '#FF7668',
     SECONDARY_2_3: '#FF311B',
     SECONDARY_2_4: '#CF1603',
-    FOREGROUND: '#333',
+    FOREGROUND: '#232526',
     FOREGROUND_REVERSE: '#fff',
+    EMPHASIS_1: '#232426',
+    EMPHASIS_2: '#424242'
 };
 
 export type Theme = typeof theme;
