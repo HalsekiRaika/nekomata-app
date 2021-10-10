@@ -25,18 +25,11 @@ export const NekomataTitleBar = () => {
                              points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1"/>
                 </svg>
             </ExitButton>
-            { isMaximized ?
-                <Button onClick={unMaximizeHandler} aria-label={"元に戻す"}>
-                    <svg aria-hidden={false} width={6} height={6}>
-                        <rect fill="none" stroke="white" width="6" height="6" fillRule="evenodd" />
-                    </svg>
-                </Button> :
-                <Button onClick={maximizeHandler} aria-label={"最大化"}>
-                    <svg aria-hidden={false} width={12} height={12} viewBox={"0 0 12 12"}>
-                        <rect fill="none" stroke="white" width="12" height="12" fillRule="evenodd" />
-                    </svg>
-                </Button>
-            }
+            <Button onClick={isMaximized ? unMaximizeHandler : maximizeHandler} aria-label={isMaximized ? "元に戻す" : "最大化"}>
+                <svg aria-hidden={false} width={12} height={12}>
+                    <rect fill="none" stroke="white" width="12" height="12" fillRule="evenodd" />
+                </svg>
+            </Button>
             <Button onClick={minimizeHandler} aria-label={"最小化"}>
                 <svg aria-hidden={false} width={12} height={12} viewBox={"0 0 12 1"}>
                     <rect fill="none" stroke="white" width="12" height="0.5" fillRule="evenodd" />
