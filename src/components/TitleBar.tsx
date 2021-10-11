@@ -45,18 +45,21 @@ export const NekomataTitleBar = () => {
 
 const TitleBar = styled.div`
   top: 0;
-  height: 20px;
+  height: 30px;
   background-color: ${(props): string => props.theme.FOREGROUND};
   display: flex;
   flex-direction: row-reverse;
   align-items: stretch;
   -webkit-app-region: drag;
+  border-color: ${(props): string => props.theme.EMPHASIS_2};
+  border-bottom-style: solid;
+  border-width: 0.5px;
 `;
 
 const Button = styled.div`
   top: -4px;
-  width: 30px;
-  height: 20px;
+  width: 45px;
+  height: 30px;
   float: right;
   background-color: ${(props): string => props.theme.FOREGROUND};
   cursor: pointer;
@@ -72,8 +75,8 @@ const Button = styled.div`
 
 const ExitButton = styled.div`
   top: -4px;
-  width: 30px;
-  height: 20px;
+  width: 45px;
+  height: 30px;
   background-color: ${(props): string => props.theme.FOREGROUND};
   cursor: pointer;
   display: flex;
@@ -88,7 +91,7 @@ const ExitButton = styled.div`
 
 const Spacer = styled.div`
   width: 45px;
-  height: 20px;
+  height: 30px;
   background-color: ${(props): string => props.theme.FOREGROUND};
 `;
 

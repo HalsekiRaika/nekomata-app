@@ -15,10 +15,11 @@ import ReactDom from "react-dom";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import store from "./actions/store/Store";
-import HomeTileGridList from "./components/containers/HomeTileGridList";
 import { DefaultStyle } from "./components/styles/DefaultStyle";
 import { theme } from "./components/styles/ThemeStyle";
 import { NekomataTitleBar } from "./components/TitleBar";
+import { Header } from "./components/Header";
+import HomeTileGridList from "./components/containers/HomeTileGridList";
 
 const container = document.getElementById("contents");
 
@@ -27,8 +28,9 @@ ReactDom.render(
         {}
         <ThemeProvider theme={theme}>
             {}
-            <NekomataTitleBar/>
             <DefaultStyle />
+            <NekomataTitleBar />
+            <Header />
             <HomeTileGridList />
         </ThemeProvider>
     </Provider>

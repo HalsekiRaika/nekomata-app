@@ -19,7 +19,9 @@ export const theme = {
     FOREGROUND: '#232526',
     FOREGROUND_REVERSE: '#fff',
     EMPHASIS_1: '#232426',
-    EMPHASIS_2: '#424242'
+    EMPHASIS_2: '#424242',
+    EMPHASIS_3: '#5e5e5e',
+    EMPHASIS_4: '#7d7d7d'
 };
 
 export type Theme = typeof theme;
