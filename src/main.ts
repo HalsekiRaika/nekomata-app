@@ -1,7 +1,6 @@
 import path from "path";
 import { app, BrowserWindow, ipcMain } from "electron";
 import Logger from "./core/logger/Logger";
-import * as IsDev from "electron-is-dev";
 import { Signals } from "./core/Signals";
 
 const logger = new Logger("Electron");
@@ -26,14 +25,6 @@ const createWindow = (): void => {
     windowProp.loadFile(path.join(__dirname, "./index.html")).then(_ => {
         logger.pInfo("Html file loaded.")
     });
-
-    if (IsDev) {
-        require("electron-reload")(__dirname, {
-            electron: path.join(__dirname, "node_modules", ".bin", "electron"),
-            forceHardReset: true,
-            hardResetMethod: 'exit'
-        });
-    }
 };
 
 app.whenReady().then(createWindow).then(_ => {
